@@ -1,0 +1,103 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: 'ubuntu', sans-serif;
+	padding: 0;
+	height: 100px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 24px;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	color: steelblue;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	margin: 0;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background-color: steelblue;
+}
+
+.diff {
+	float: right;
+}
+
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-top: 30%;
+	float: left;
+	margin: 1.66%;
+	visibility: visible;
+	border-radius: 15%;
+	transition: background 0.8s;
+	-webkit-transition: background 0.8s;
+	-moz-transition: background 0.8s;
+}
+
+.selected {
+	background-color: steelblue;
+	color: white;
+}
+
+#stripe {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	background-color: white;
+	margin: 0;
+}
+
+#reset {
+	float: left;
+}
+
+#container {
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+#title {
+	background-color: steelblue;
+	margin: 0;
+	text-align: center;
+	padding: 20px;
+	color: white;
+	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4); 
+}
+
+#current-color {
+	margin: 0;
+}
+
+#message {
+	margin: 15px; auto;
+	color: lightgrey;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#button-container {
+	margin: 0 auto;
+	height: 100%;
+	max-width: 500px;
+}
