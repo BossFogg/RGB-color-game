@@ -6,6 +6,8 @@ var messageDisplay = document.querySelector("#message");
 var resetBtn = document.querySelector("#reset");
 var titleBar = document.querySelector("#title");
 var diffBtns = document.querySelectorAll(".diff")
+var optionBtn = document.querySelector("#option");
+var menu = document.querySelector("ul");
 var difficulty = 6;
 
 init();
@@ -26,7 +28,8 @@ function setSquares() {
 				winnerDisplay(clickedColor);
 			}
 			else {
-				this.style.backgroundColor = "#232323";
+				this.style.backgroundColor = "rgb(50, 50, 50)";
+				this.style.boxShadow = "none"
 				messageDisplay.textContent = "Try again";
 			}
 		})
@@ -38,12 +41,14 @@ function setButtons() {
 		reset(difficulty);
 	});
 
+	optionBtn.addEventListener("click", toggleMenu);
+
 	for(i = 0; i < diffBtns.length; i++) {
 		diffBtns[i].addEventListener("click", function(){
-			clearSelection();
-			this.classList.add("selected");
 			this.textContent === "easy" ? difficulty = 3: difficulty = 6;
 			if (this.textContent==="hard") { difficulty = 9 };
+			menu.classList.add("hidden")
+			clearSelection();
 			reset(difficulty);
 		})
 	};
@@ -62,8 +67,22 @@ function reset(diff) {
 
 function clearSelection() {
 	for (i = 0; i < diffBtns.length; i++) {
+		var currentText = diffBtns[i].textContent;
 		diffBtns[i].classList.remove("selected");
+		if(currentText === "easy" && difficulty === 3) {
+			diffBtns[i].classList.add("selected");
+		}
+		else if (currentText === "medium" && difficulty === 6) {
+			diffBtns[i].classList.add("selected");
+		}
+		else if(currentText === "hard" && difficulty === 9) {
+			diffBtns[i].classList.add("selected");
+		}
 	}
+};
+
+function toggleMenu() {
+	menu.classList.toggle("hidden");
 };
 
 function showHideSquares(diff) {
@@ -80,6 +99,7 @@ function showHideSquares(diff) {
 function paintSquares() {
 	for(i = 0; i<difficulty; i++) {
 		squares[i].style.backgroundColor = colors[i];
+		squares[i].style.boxShadow = "4px 4px 2px rgba(0, 0, 0, 0.3)"
 	}
 };
 

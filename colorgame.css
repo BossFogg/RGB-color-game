@@ -1,16 +1,14 @@
 body {
-	background-color: #232323;
+	background-color: rgb(50, 50, 50);
 	margin: 0;
 	font-family: 'ubuntu', sans-serif;
 	padding: 0;
 	height: 100px;
 }
-
 h1 {
 	margin: 0;
 	font-size: 24px;
 }
-
 button {
 	border: none;
 	background: none;
@@ -27,16 +25,34 @@ button {
 	-moz-transition: all 0.3s;
 	outline: none;
 }
-
 button:hover {
 	color: white;
 	background-color: steelblue;
 }
-
-.diff {
+ul {
+	position: absolute;
+	background-color: white;
+	top: 48px;
+	right: 0px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin: 0;
+	width: 100px;
+	padding: 10px 5px;
+	font-size: 20px;
+	text-align: right;
+	color: steelblue;
+	border-bottom: 1px solid steelblue;
+}
+.hidden {
+	display: none;
+}
+.full {
 	float: right;
 }
-
 .square {
 	width: 30%;
 	background-color: purple;
@@ -45,16 +61,33 @@ button:hover {
 	margin: 1.66%;
 	visibility: visible;
 	border-radius: 15%;
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.3);
 	transition: background 0.8s;
 	-webkit-transition: background 0.8s;
 	-moz-transition: background 0.8s;
 }
-
 .selected {
 	background-color: steelblue;
 	color: white;
 }
-
+.fa-cog {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+#option {
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 36px;
+	margin: 6px 8px;
+	display: none;
+	background-color: steelblue;
+	border-radius: 8px;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
 #stripe {
 	width: 100%;
 	height: 30px;
@@ -62,16 +95,13 @@ button:hover {
 	background-color: white;
 	margin: 0;
 }
-
 #reset {
 	float: left;
 }
-
 #container {
 	max-width: 600px;
 	margin: 20px auto;
 }
-
 #title {
 	background-color: steelblue;
 	margin: 0;
@@ -83,21 +113,52 @@ button:hover {
 	text-transform: uppercase;
 	text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.4); 
 }
-
 #current-color {
 	margin: 0;
 }
-
 #message {
-	margin: 15px; auto;
+	margin: 15px;
 	color: lightgrey;
 	font-size: 20px;
 	font-weight: 700;
 	text-align: center;
 }
-
 #button-container {
+	position: relative;
 	margin: 0 auto;
 	height: 100%;
 	max-width: 500px;
+}
+
+@media screen and (max-width: 490px) {
+	.full {
+		display: none;
+	}
+	#option {
+		display: block;
+	}
+	#stripe {
+		height: 48px;
+	}
+	#reset {
+		width: 190px;
+		height: 36px;
+		font-size: 24px;
+		color: white;
+		background-color: steelblue;
+		margin: 6px 8px;
+		border-radius: 8px;
+		box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+	}
+	#title {
+		font-size: 28px;
+	}
+}
+@media screen and (max-width: 415px) {
+	h1 {
+		font-size: 18px;
+	}
+	#title {
+		font-size: 20px;
+	}
 }

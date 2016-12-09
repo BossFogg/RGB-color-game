@@ -3,6 +3,7 @@
 <head>
 	<title>RGB Guessing Game</title>
 	<link rel="stylesheet" type="text/css" href="colorgame.css">
+	<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +16,15 @@
 <div id="stripe">
 	<div id="button-container">
 		<button id="reset">reset</button>
-		<button class="diff">easy</button>
-		<button class="diff selected">medium</button>
-		<button class="diff">hard</button>
+		<div id="option"><i class="fa fa-cog fa-2x"></i></div>
+		<ul class="hidden">
+			<li class="diff">hard</li>
+			<li class="diff selected">medium</li>
+			<li class="diff">easy</li>
+		</ul>
+		<button class="diff full">hard</button>
+		<button class="diff full selected">medium</button>
+		<button class="diff full">easy</button>
 	</div>
 </div>
 <div id="container">
