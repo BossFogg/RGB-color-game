@@ -99,7 +99,7 @@ function showHideSquares(diff) {
 function paintSquares() {
 	for(i = 0; i<difficulty; i++) {
 		squares[i].style.backgroundColor = colors[i];
-		squares[i].style.boxShadow = "4px 4px 2px rgba(0, 0, 0, 0.3)"
+		squares[i].style.boxShadow = "4px 4px 2px rgba(0, 0, 0, 0.3)";
 	}
 };
 
@@ -127,6 +127,7 @@ function pickColor() {
 function winnerDisplay(color) {
 	for(i = 0; i<squares.length; i++) {
 		squares[i].style.backgroundColor = color;
+		squares[i].style.boxShadow = "4px 4px 2px rgba(0, 0, 0, 0.3)";
 	};
 	titleBar.style.backgroundColor = pickedColor;
 };

@@ -46,6 +46,7 @@ li {
 	text-align: right;
 	color: steelblue;
 	border-bottom: 1px solid steelblue;
+	text-transform: uppercase;
 }
 .hidden {
 	display: none;
